@@ -32,4 +32,64 @@ class BankSystemTest {
         assertEquals("ERROR_FUNDS",
             bank.transfer("A2","A3",120,"USD","APP","R3","n","C2",false,false));
     }
+
+    @Test
+    public void testAddAccount() {
+        System.out.println("addAccount");
+        Account account = null;
+        BankSystem instance = new BankSystem();
+        instance.addAccount(account);
+        fail("The test case is a prototype.");
+    }
+
+    @Test
+    public void testAddCustomer() {
+        System.out.println("addCustomer");
+        Customer customer = null;
+        BankSystem instance = new BankSystem();
+        instance.addCustomer(customer);
+        fail("The test case is a prototype.");
+    }
+
+    @Test
+    public void testGetBalance() {
+        System.out.println("getBalance");
+        String accountId = "";
+        BankSystem instance = new BankSystem();
+        double expResult = 0.0;
+        double result = instance.getBalance(accountId);
+        assertEquals(expResult, result, 0);
+        fail("The test case is a prototype.");
+    }
+
+    @Test
+    public void testTransfer() {
+        System.out.println("transfer");
+        String fromId = "";
+        String toId = "";
+        double amount = 0.0;
+        String currency = "";
+        String channel = "";
+        String reference = "";
+        String note = "";
+        String performedByCustomerId = "";
+        boolean applyFee = false;
+        boolean allowOverdraft = false;
+        BankSystem instance = new BankSystem();
+        String expResult = "";
+        String result = instance.transfer(fromId, toId, amount, currency, channel, reference, note, performedByCustomerId, applyFee, allowOverdraft);
+        assertEquals(expResult, result);
+        fail("The test case is a prototype.");
+    }
+
+    @Test
+    public void testGenerateMonthlyStatement() {
+        System.out.println("generateMonthlyStatement");
+        String accountId = "";
+        BankSystem instance = new BankSystem();
+        String expResult = "";
+        String result = instance.generateMonthlyStatement(accountId);
+        assertEquals(expResult, result);
+        fail("The test case is a prototype.");
+    }
 }
