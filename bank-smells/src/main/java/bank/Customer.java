@@ -1,7 +1,7 @@
 package bank;
 class Customer {
-    private final String id;
-    private final Profile profile;
+    public final String id;
+    public final Profile profile;
     Customer(String id, Profile profile) {
         this.id = id;
         this.profile = profile;
